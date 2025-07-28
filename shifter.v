@@ -1,0 +1,31 @@
+module shifter
+(
+input [31:0] a,
+input [4:0] n,
+input [1:0] funct,
+output reg [31:0] r
+);
+
+function [31:0] sra(input [31:0] a, input [4:0] n);
+	reg [31:0] temp, sntd;
+	reg sign;
+	
+	begin
+	temp = a >> n;
+	sign = a[31];
+	sntd = sign ? 2**32 - 1 : 0;
+	sntd = sntd << (32-n);
+	sra = temp | sntd;
+	end
+endfunction
+
+always@(*) begin
+	case (funct)
+	0 : r = a << n;
+	2 : r = a >> n;
+	3 : r = sra(a, n);
+	default : r = 0;
+	endcase
+end
+
+endmodule 

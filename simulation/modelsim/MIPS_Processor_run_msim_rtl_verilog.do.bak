@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/baseline_c5gx.v}
+

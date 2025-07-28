@@ -1,0 +1,143 @@
+# Reading pref.tcl
+# ERROR: No extended dataflow license exists
+# do MIPS_Processor_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/MIPS_Processor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:57 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/MIPS_Processor.v 
+# -- Compiling module mips_processor
+# 
+# Top level modules:
+# 	mips_processor
+# End time: 13:22:57 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/instruction_decoder.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:57 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/instruction_decoder.v 
+# -- Compiling module instruction_decoder
+# 
+# Top level modules:
+# 	instruction_decoder
+# End time: 13:22:57 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/ALU.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:58 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/ALU.v 
+# -- Compiling module ALU
+# -- Compiling module ALU_Result
+# -- Compiling module Compare_TwoC
+# 
+# Top level modules:
+# 	ALU
+# End time: 13:22:58 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/shifter.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:58 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/shifter.v 
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# End time: 13:22:58 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/xtimm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:58 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/xtimm.v 
+# -- Compiling module xtimm
+# 
+# Top level modules:
+# 	xtimm
+# End time: 13:22:58 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/cond_eval.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:58 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/cond_eval.v 
+# -- Compiling module cond_eval
+# -- Compiling module twos_complement
+# 
+# Top level modules:
+# 	cond_eval
+# End time: 13:22:59 on Jun 07,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/Mips_proccesor_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:59 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/Mips_proccesor_tb.v 
+# -- Compiling module Mips_proccesor_tb
+# 
+# Top level modules:
+# 	Mips_proccesor_tb
+# End time: 13:22:59 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/general_porpuse_register.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:59 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/general_porpuse_register.v 
+# -- Compiling module general_porpuse_register
+# 
+# Top level modules:
+# 	general_porpuse_register
+# End time: 13:22:59 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2\ term/CA\ LAB/HWs/HW15/finali {C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 13:22:59 on Jun 07,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali" C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/memory.v 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 13:22:59 on Jun 07,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.Mips_proccesor_tb
+# vsim work.Mips_proccesor_tb 
+# Start time: 13:23:04 on Jun 07,2024
+# Loading work.Mips_proccesor_tb
+# Loading work.mips_processor
+# Loading work.general_porpuse_register
+# Loading work.instruction_decoder
+# Loading work.ALU
+# Loading work.ALU_Result
+# Loading work.Compare_TwoC
+# Loading work.memory
+# Loading work.shifter
+# Loading work.xtimm
+# Loading work.cond_eval
+# Loading work.twos_complement
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (3) for port 'funct'. The port definition is at: C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/shifter.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /Mips_proccesor_tb/dut/shifter_inst File: C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/MIPS_Processor.v Line: 85
+add wave -position insertpoint  \
+sim:/Mips_proccesor_tb/clk \
+sim:/Mips_proccesor_tb/rst \
+sim:/Mips_proccesor_tb/aluresout \
+sim:/Mips_proccesor_tb/shift_resultout \
+sim:/Mips_proccesor_tb/GP_DATA_INout
+run
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 32 of file "C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/Text1.txt". (Current address [32], address range [0:31])    : C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW15/finali/memory.v(20)
+#    Time: 0 ps  Iteration: 0  Instance: /Mips_proccesor_tb/dut/gpr_inst
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 13:30:21 on Jun 07,2024, Elapsed time: 0:07:17
+# Errors: 0, Warnings: 2

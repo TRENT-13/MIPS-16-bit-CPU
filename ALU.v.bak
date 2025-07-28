@@ -1,0 +1,50 @@
+module alu (
+input selector,
+input [31:0] srcA, srcB,
+input [3:0] af,
+output reg[31:0] alures,
+output reg zero,
+output reg neg,
+output reg ovfalu
+);
+
+
+
+
+always @(*) 
+	begin 
+	zero = 0 ;
+neg = 0;
+ovfalu = 0;
+	if (selector) begin
+		case (af)
+			4'b0000: alures = srcA+srcB;
+			4'b0001: alures = srcA-srcB;
+			4'b0010: alures = srcA&srcB;
+			4'b0011: alures = srcA | srcB;
+			4'b0100: alures = srcA ^ srcB;
+			4'b0101: alures = {srcA[15:0], 16'b0};
+			4'b0110: alures = ($signed(srcA) < $signed(srcB)) ? 1 : 0;
+			4'b0111: alures = (srcA < srcB) ? 1 : 0;
+			default: alures = 0;
+		 endcase
+	end else begin
+		case (af)
+			4'b1000: alures = srcA+srcB;
+			4'b1001: alures = srcA-srcB;
+			4'b1010: alures = srcA&srcB;
+			4'b1011: alures = srcA | srcB;
+			4'b1100: alures = srcA ^ srcB;
+			4'b1101: alures = ~(srcA | srcB); 
+			4'b1110: alures = ($signed(srcA) < $signed(srcB))? 1 : 0;
+			4'b1111: alures = (srcA<srcB) ? 1 : 0;
+			default: alures = 0;
+		endcase
+	end
+	zero = (alures == 0);
+    neg = (alures[31] == 1);
+	 ovfalu = ((af == 4'b0000 || af == 4'b0001 || af == 4'b1000 || af == 4'b1001) && 
+             ((srcA[31] == srcB[31]) && (alures[31] != srcA[31])));
+	 
+	end
+endmodule 

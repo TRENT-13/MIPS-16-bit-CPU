@@ -1,0 +1,7 @@
+module MIPS_Processor (
+    input wire clk,
+    input wire reset,
+    output wire [31:0] aluresout,
+    output wire [31:0] shift_resultout,
+    output wire [31:0] GP_DATA_INout
+);

@@ -1,0 +1,27 @@
+module memory(
+input clk,
+write_enable,
+input [4:0] addrA,
+addrB,
+addrC,
+input [31:0] data_in_C,
+output reg [31:0] data_out_A,
+data_out_B
+);    
+    reg [31:0] regfile [0:31];
+    
+    initial begin
+        $readmemb("C:/Users/kiustudents/Desktop/Sophomore/Sophomore/2 term/CA LAB/HWs/HW7/Text1.txt", regfile);
+        regfile[0] = 32'd0;
+    end
+    
+    always@(*) begin
+        data_out_A = regfile[addrA];
+        data_out_B = regfile[addrB];
+    end
+    
+    always@(posedge clk) begin
+        if (write_enable & (addrC != 0))
+            regfile[addrC] = data_in_C;
+    end
+endmodule 

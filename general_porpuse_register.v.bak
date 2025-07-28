@@ -1,0 +1,75 @@
+module mips
+(
+input [31:0] data_addr_in, data_in, next_pc,
+input clk, rst, s,
+output reg [31:0] pc_out, Iout, Mout,
+output reg E
+);
+
+reg[31:0] mem[0:255]; //lets say the first 128 elements are for instructions
+reg[31:0] instr_reg_I;
+reg[29:0] pc;
+
+initial begin
+	$readmemb("C:/Users/kiustudent/Documents/quartus/Lab10/mem.txt", mem);
+	Mout = 0;
+	Iout = 0;
+	pc_out = 0;
+	E = 0;
+end
+
+function computeE(input E, clk, rst);
+	if (rst)
+		computeE = 0;
+	else
+		computeE = clk ? ~E : E;
+endfunction
+
+function [31:0] computePC(input [31:0] pc, input clk, rst, E);
+	begin
+	
+	computePC = 0;
+	
+	if (rst)
+		computePC = 0;
+	else begin		
+		if (clk && E)
+			computePC = computePC+4; 
+		else
+			computePC = computePC;
+	end
+	
+	end
+endfunction
+
+function [31:0] computeIRI(input [31:0] pc, input E, input [31:0] IRI, rst);
+	if (rst)
+		computeIRI = 0;
+	else if (clk && !E)
+		computeIRI = pc;
+	else
+		computeIRI = IRI;
+endfunction
+
+always@(posedge clk) begin
+	E = computeE(E, clk, rst);
+	pc_out = computePC(pc_out, clk, rst, E);
+	instr_reg_I = computeIRI(pc_out, E, instr_reg_I, rst);
+	
+	pc = pc_out[31:2];
+	
+	if (!E) begin
+		Iout = mem[pc];
+		Mout = mem[pc];
+	end else begin
+		Iout = mem[instr_reg_I];
+		Mout = 0;
+		
+		if (s)
+			mem[data_addr_in] = data_in;
+		else
+			Mout = mem[data_addr_in];
+	end
+end
+
+endmodule

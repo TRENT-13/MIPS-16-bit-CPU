@@ -1,0 +1,45 @@
+module tb_MIPS_Processor;
+    // Inputs
+    reg clk;
+    reg reset;
+
+    // Outputs
+    wire [31:0] aluresout;
+    wire [31:0] shift_resultout;
+    wire [31:32] GP_DATA_INout;
+
+    // Instantiate the Unit Under Test (UUT)
+    MIPS_Processor uut (
+        .clk(clk), 
+        .reset(reset), 
+        .aluresout(aluresout), 
+        .shift_resultout(shift_resultout),
+        .GP_DATA_INout(GP_DATA_INout)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk;
+
+    initial begin
+        // Initialize Inputs
+        clk = 0;
+        reset = 1;
+
+        // Wait for global reset
+        #100;
+        reset = 0;
+
+        // Load instructions and test cases from a file
+        $readmemb("Text1.txt", uut.memory_inst.mem);
+
+        // Add stimulus here
+
+        // Monitor output
+        $monitor("Time=%t, ALU Result=%h, Shift Result=%h, GP Data In=%h", 
+                 $time, aluresout, shift_resultout, GP_DATA_INout);
+
+        // Finish after some time
+        #1000 $finish;
+    end
+
+endmodule
